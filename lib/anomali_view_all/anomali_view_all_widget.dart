@@ -1,3 +1,4 @@
+import '../anomali_detail/anomali_detail_widget.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -298,19 +299,18 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               text: 'Semua',
                                               options: FFButtonOptions(
                                                 width: 70,
-                                                height: 35,
-                                                color: Color(0xFFEFEFEF),
-                                                textStyle:
-                                                    FlutterFlowTheme.of(context)
-                                                        .subtitle2
-                                                        .override(
-                                                          fontFamily:
-                                                              'Montserrat',
-                                                          color: Colors.black,
-                                                          fontSize: 12,
-                                                          fontWeight:
-                                                              FontWeight.w300,
-                                                        ),
+                                                height: 30,
+                                                color: Color(0xFF507C78),
+                                                textStyle: FlutterFlowTheme.of(
+                                                        context)
+                                                    .subtitle2
+                                                    .override(
+                                                      fontFamily: 'Montserrat',
+                                                      color: Color(0xFFEFEFEF),
+                                                      fontSize: 12,
+                                                      fontWeight:
+                                                          FontWeight.w300,
+                                                    ),
                                                 elevation: 0,
                                                 borderSide: BorderSide(
                                                   color: Colors.transparent,
@@ -327,7 +327,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               text: 'Selesai',
                                               options: FFButtonOptions(
                                                 width: 70,
-                                                height: 35,
+                                                height: 30,
                                                 color: Color(0xFFEFEFEF),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
@@ -356,7 +356,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               text: 'Proses',
                                               options: FFButtonOptions(
                                                 width: 70,
-                                                height: 35,
+                                                height: 30,
                                                 color: Color(0xFFEFEFEF),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
@@ -385,7 +385,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               text: 'Berulang',
                                               options: FFButtonOptions(
                                                 width: 70,
-                                                height: 35,
+                                                height: 30,
                                                 color: Color(0xFFEFEFEF),
                                                 textStyle:
                                                     FlutterFlowTheme.of(context)
@@ -547,48 +547,51 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(10, 2, 10, 2),
-                                              child: Container(
-                                                height: 80,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xFF95341A),
-                                                  borderRadius:
-                                                      BorderRadius.only(
-                                                    bottomLeft:
-                                                        Radius.circular(5),
-                                                    bottomRight:
-                                                        Radius.circular(30),
-                                                    topLeft: Radius.circular(5),
-                                                    topRight:
-                                                        Radius.circular(30),
-                                                  ),
-                                                ),
-                                                child: Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          1, 0),
-                                                  child: Material(
-                                                    color: Colors.transparent,
-                                                    elevation: 2,
-                                                    shape:
-                                                        RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.only(
-                                                        bottomLeft:
-                                                            Radius.circular(0),
-                                                        bottomRight:
-                                                            Radius.circular(30),
-                                                        topLeft:
-                                                            Radius.circular(0),
-                                                        topRight:
-                                                            Radius.circular(30),
+                                              child: InkWell(
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .rightToLeft,
+                                                      duration: Duration(
+                                                          milliseconds: 500),
+                                                      reverseDuration: Duration(
+                                                          milliseconds: 500),
+                                                      child:
+                                                          AnomaliDetailWidget(
+                                                        anomaliDetails:
+                                                            listViewAnomaliRecord
+                                                                .reference,
                                                       ),
                                                     ),
-                                                    child: Container(
-                                                      width: 305,
-                                                      height: 100,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFEFEFEF),
+                                                  );
+                                                },
+                                                child: Container(
+                                                  height: 80,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xFF95341A),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      bottomLeft:
+                                                          Radius.circular(5),
+                                                      bottomRight:
+                                                          Radius.circular(30),
+                                                      topLeft:
+                                                          Radius.circular(5),
+                                                      topRight:
+                                                          Radius.circular(30),
+                                                    ),
+                                                  ),
+                                                  child: Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            1, 0),
+                                                    child: Material(
+                                                      color: Colors.transparent,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
                                                         borderRadius:
                                                             BorderRadius.only(
                                                           bottomLeft:
@@ -605,234 +608,252 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                   30),
                                                         ),
                                                       ),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Expanded(
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10,
-                                                                          5,
-                                                                          0,
-                                                                          0),
+                                                      child: Container(
+                                                        width: 305,
+                                                        height: 100,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0xFFEFEFEF),
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    30),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    30),
+                                                          ),
+                                                        ),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Expanded(
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10,
+                                                                            5,
+                                                                            0,
+                                                                            0),
+                                                                child: Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding: EdgeInsetsDirectional
+                                                                          .fromSTEB(
+                                                                              0,
+                                                                              0,
+                                                                              0,
+                                                                              5),
+                                                                      child:
+                                                                          Text(
+                                                                        listViewAnomaliRecord
+                                                                            .namaAnomali,
+                                                                        maxLines:
+                                                                            2,
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyText1
+                                                                            .override(
+                                                                              fontFamily: 'Montserrat',
+                                                                              fontSize: 12,
+                                                                              fontWeight: FontWeight.w300,
+                                                                            ),
+                                                                      ),
+                                                                    ),
+                                                                    Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .start,
+                                                                      children: [
+                                                                        Icon(
+                                                                          Icons
+                                                                              .tag,
+                                                                          color:
+                                                                              Color(0xFF507C78),
+                                                                          size:
+                                                                              15,
+                                                                        ),
+                                                                        Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              5,
+                                                                              0,
+                                                                              0,
+                                                                              0),
+                                                                          child:
+                                                                              Text(
+                                                                            listViewAnomaliRecord.tagAnomali,
+                                                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                  fontFamily: 'Montserrat',
+                                                                                  fontSize: 10,
+                                                                                  fontWeight: FontWeight.w100,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                    Expanded(
+                                                                      child:
+                                                                          Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            0,
+                                                                            0),
+                                                                        child:
+                                                                            Row(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.max,
+                                                                          mainAxisAlignment:
+                                                                              MainAxisAlignment.spaceEvenly,
+                                                                          children: [
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.start,
+                                                                              children: [
+                                                                                Icon(
+                                                                                  Icons.person,
+                                                                                  color: Color(0xFF507C78),
+                                                                                  size: 15,
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                  child: StreamBuilder<UsersRecord>(
+                                                                                    stream: UsersRecord.getDocument(listViewAnomaliRecord.userPostAnomali),
+                                                                                    builder: (context, snapshot) {
+                                                                                      // Customize what your widget looks like when it's loading.
+                                                                                      if (!snapshot.hasData) {
+                                                                                        return Center(
+                                                                                          child: SizedBox(
+                                                                                            width: 50,
+                                                                                            height: 50,
+                                                                                            child: CircularProgressIndicator(
+                                                                                              color: FlutterFlowTheme.of(context).primaryColor,
+                                                                                            ),
+                                                                                          ),
+                                                                                        );
+                                                                                      }
+                                                                                      final textUsersRecord = snapshot.data;
+                                                                                      return Text(
+                                                                                        textUsersRecord.displayName,
+                                                                                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                              fontFamily: 'Montserrat',
+                                                                                              fontSize: 10,
+                                                                                              fontWeight: FontWeight.w300,
+                                                                                            ),
+                                                                                      );
+                                                                                    },
+                                                                                  ),
+                                                                                ),
+                                                                              ],
+                                                                            ),
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.start,
+                                                                              children: [
+                                                                                Icon(
+                                                                                  Icons.access_time,
+                                                                                  color: Color(0xFF507C78),
+                                                                                  size: 15,
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                  child: Text(
+                                                                                    dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
+                                                                                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                          fontFamily: 'Montserrat',
+                                                                                          fontSize: 10,
+                                                                                          fontWeight: FontWeight.w300,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                              ],
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              width: 30,
+                                                              decoration:
+                                                                  BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
                                                                 children: [
-                                                                  Padding(
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0,
-                                                                            0,
-                                                                            0,
-                                                                            5),
-                                                                    child: Text(
-                                                                      listViewAnomaliRecord
-                                                                          .namaAnomali,
-                                                                      maxLines:
-                                                                          2,
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyText1
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Montserrat',
-                                                                            fontSize:
-                                                                                12,
-                                                                            fontWeight:
-                                                                                FontWeight.w300,
-                                                                          ),
-                                                                    ),
-                                                                  ),
-                                                                  Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .start,
-                                                                    children: [
-                                                                      Icon(
-                                                                        Icons
-                                                                            .tag,
-                                                                        color: Color(
-                                                                            0xFF507C78),
-                                                                        size:
-                                                                            15,
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5,
-                                                                            0,
-                                                                            0,
-                                                                            0),
-                                                                        child:
-                                                                            Text(
-                                                                          listViewAnomaliRecord
-                                                                              .tagAnomali,
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 10,
-                                                                                fontWeight: FontWeight.w100,
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                  Expanded(
-                                                                    child:
-                                                                        Align(
+                                                                  if ((listViewAnomaliRecord
+                                                                          .statusAnomali) ==
+                                                                      0)
+                                                                    Align(
                                                                       alignment:
                                                                           AlignmentDirectional(
                                                                               0,
                                                                               0),
                                                                       child:
-                                                                          Row(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.spaceEvenly,
-                                                                        children: [
-                                                                          Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
-                                                                            children: [
-                                                                              Icon(
-                                                                                Icons.person,
-                                                                                color: Color(0xFF507C78),
-                                                                                size: 15,
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                child: StreamBuilder<UsersRecord>(
-                                                                                  stream: UsersRecord.getDocument(listViewAnomaliRecord.userPostAnomali),
-                                                                                  builder: (context, snapshot) {
-                                                                                    // Customize what your widget looks like when it's loading.
-                                                                                    if (!snapshot.hasData) {
-                                                                                      return Center(
-                                                                                        child: SizedBox(
-                                                                                          width: 50,
-                                                                                          height: 50,
-                                                                                          child: CircularProgressIndicator(
-                                                                                            color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                          ),
-                                                                                        ),
-                                                                                      );
-                                                                                    }
-                                                                                    final textUsersRecord = snapshot.data;
-                                                                                    return Text(
-                                                                                      textUsersRecord.displayName,
-                                                                                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            fontSize: 10,
-                                                                                            fontWeight: FontWeight.w300,
-                                                                                          ),
-                                                                                    );
-                                                                                  },
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                          Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
-                                                                            children: [
-                                                                              Icon(
-                                                                                Icons.access_time,
-                                                                                color: Color(0xFF507C78),
-                                                                                size: 15,
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                child: Text(
-                                                                                  dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
-                                                                                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                        fontFamily: 'Montserrat',
-                                                                                        fontSize: 10,
-                                                                                        fontWeight: FontWeight.w300,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                        ],
+                                                                          Container(
+                                                                        width:
+                                                                            15,
+                                                                        height:
+                                                                            15,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color:
+                                                                              Color(0xFF95341A),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(100),
+                                                                        ),
                                                                       ),
                                                                     ),
-                                                                  ),
+                                                                  if ((listViewAnomaliRecord
+                                                                          .statusAnomali) ==
+                                                                      1)
+                                                                    Align(
+                                                                      alignment:
+                                                                          AlignmentDirectional(
+                                                                              0,
+                                                                              0),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            15,
+                                                                        height:
+                                                                            15,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color:
+                                                                              Color(0xFF2A8233),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(100),
+                                                                        ),
+                                                                      ),
+                                                                    ),
                                                                 ],
                                                               ),
                                                             ),
-                                                          ),
-                                                          Container(
-                                                            width: 30,
-                                                            decoration:
-                                                                BoxDecoration(),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              children: [
-                                                                if ((listViewAnomaliRecord
-                                                                        .statusAnomali) ==
-                                                                    0)
-                                                                  Align(
-                                                                    alignment:
-                                                                        AlignmentDirectional(
-                                                                            0,
-                                                                            0),
-                                                                    child:
-                                                                        Container(
-                                                                      width: 15,
-                                                                      height:
-                                                                          15,
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        color: Color(
-                                                                            0xFF95341A),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(100),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                if ((listViewAnomaliRecord
-                                                                        .statusAnomali) ==
-                                                                    1)
-                                                                  Align(
-                                                                    alignment:
-                                                                        AlignmentDirectional(
-                                                                            0,
-                                                                            0),
-                                                                    child:
-                                                                        Container(
-                                                                      width: 15,
-                                                                      height:
-                                                                          15,
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        color: Color(
-                                                                            0xFF2A8233),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(100),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),
@@ -845,48 +866,51 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                             Padding(
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(10, 2, 10, 2),
-                                              child: Container(
-                                                height: 80,
-                                                decoration: BoxDecoration(
-                                                  color: Color(0xFF385754),
-                                                  borderRadius:
-                                                      BorderRadius.only(
-                                                    bottomLeft:
-                                                        Radius.circular(5),
-                                                    bottomRight:
-                                                        Radius.circular(30),
-                                                    topLeft: Radius.circular(5),
-                                                    topRight:
-                                                        Radius.circular(30),
-                                                  ),
-                                                ),
-                                                child: Align(
-                                                  alignment:
-                                                      AlignmentDirectional(
-                                                          1, 0),
-                                                  child: Material(
-                                                    color: Colors.transparent,
-                                                    elevation: 2,
-                                                    shape:
-                                                        RoundedRectangleBorder(
-                                                      borderRadius:
-                                                          BorderRadius.only(
-                                                        bottomLeft:
-                                                            Radius.circular(0),
-                                                        bottomRight:
-                                                            Radius.circular(30),
-                                                        topLeft:
-                                                            Radius.circular(0),
-                                                        topRight:
-                                                            Radius.circular(30),
+                                              child: InkWell(
+                                                onTap: () async {
+                                                  await Navigator.push(
+                                                    context,
+                                                    PageTransition(
+                                                      type: PageTransitionType
+                                                          .rightToLeft,
+                                                      duration: Duration(
+                                                          milliseconds: 500),
+                                                      reverseDuration: Duration(
+                                                          milliseconds: 500),
+                                                      child:
+                                                          AnomaliDetailWidget(
+                                                        anomaliDetails:
+                                                            listViewAnomaliRecord
+                                                                .reference,
                                                       ),
                                                     ),
-                                                    child: Container(
-                                                      width: 305,
-                                                      height: 100,
-                                                      decoration: BoxDecoration(
-                                                        color:
-                                                            Color(0xFFEFEFEF),
+                                                  );
+                                                },
+                                                child: Container(
+                                                  height: 80,
+                                                  decoration: BoxDecoration(
+                                                    color: Color(0xFF385754),
+                                                    borderRadius:
+                                                        BorderRadius.only(
+                                                      bottomLeft:
+                                                          Radius.circular(5),
+                                                      bottomRight:
+                                                          Radius.circular(30),
+                                                      topLeft:
+                                                          Radius.circular(5),
+                                                      topRight:
+                                                          Radius.circular(30),
+                                                    ),
+                                                  ),
+                                                  child: Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            1, 0),
+                                                    child: Material(
+                                                      color: Colors.transparent,
+                                                      elevation: 2,
+                                                      shape:
+                                                          RoundedRectangleBorder(
                                                         borderRadius:
                                                             BorderRadius.only(
                                                           bottomLeft:
@@ -903,234 +927,252 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                   30),
                                                         ),
                                                       ),
-                                                      child: Row(
-                                                        mainAxisSize:
-                                                            MainAxisSize.max,
-                                                        children: [
-                                                          Expanded(
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10,
-                                                                          5,
-                                                                          0,
-                                                                          0),
+                                                      child: Container(
+                                                        width: 305,
+                                                        height: 100,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          color:
+                                                              Color(0xFFEFEFEF),
+                                                          borderRadius:
+                                                              BorderRadius.only(
+                                                            bottomLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            bottomRight:
+                                                                Radius.circular(
+                                                                    30),
+                                                            topLeft:
+                                                                Radius.circular(
+                                                                    0),
+                                                            topRight:
+                                                                Radius.circular(
+                                                                    30),
+                                                          ),
+                                                        ),
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.max,
+                                                          children: [
+                                                            Expanded(
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            10,
+                                                                            5,
+                                                                            0,
+                                                                            0),
+                                                                child: Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  crossAxisAlignment:
+                                                                      CrossAxisAlignment
+                                                                          .start,
+                                                                  children: [
+                                                                    Padding(
+                                                                      padding: EdgeInsetsDirectional
+                                                                          .fromSTEB(
+                                                                              0,
+                                                                              0,
+                                                                              0,
+                                                                              5),
+                                                                      child:
+                                                                          Text(
+                                                                        listViewAnomaliRecord
+                                                                            .namaAnomali,
+                                                                        maxLines:
+                                                                            2,
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyText1
+                                                                            .override(
+                                                                              fontFamily: 'Montserrat',
+                                                                              fontSize: 12,
+                                                                              fontWeight: FontWeight.w300,
+                                                                            ),
+                                                                      ),
+                                                                    ),
+                                                                    Row(
+                                                                      mainAxisSize:
+                                                                          MainAxisSize
+                                                                              .max,
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .start,
+                                                                      children: [
+                                                                        Icon(
+                                                                          Icons
+                                                                              .tag,
+                                                                          color:
+                                                                              Color(0xFF507C78),
+                                                                          size:
+                                                                              15,
+                                                                        ),
+                                                                        Padding(
+                                                                          padding: EdgeInsetsDirectional.fromSTEB(
+                                                                              5,
+                                                                              0,
+                                                                              0,
+                                                                              0),
+                                                                          child:
+                                                                              Text(
+                                                                            listViewAnomaliRecord.tagAnomali,
+                                                                            style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                  fontFamily: 'Montserrat',
+                                                                                  fontSize: 10,
+                                                                                  fontWeight: FontWeight.w100,
+                                                                                ),
+                                                                          ),
+                                                                        ),
+                                                                      ],
+                                                                    ),
+                                                                    Expanded(
+                                                                      child:
+                                                                          Align(
+                                                                        alignment: AlignmentDirectional(
+                                                                            0,
+                                                                            0),
+                                                                        child:
+                                                                            Row(
+                                                                          mainAxisSize:
+                                                                              MainAxisSize.max,
+                                                                          mainAxisAlignment:
+                                                                              MainAxisAlignment.spaceEvenly,
+                                                                          children: [
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.start,
+                                                                              children: [
+                                                                                Icon(
+                                                                                  Icons.person,
+                                                                                  color: Color(0xFF507C78),
+                                                                                  size: 15,
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                  child: StreamBuilder<UsersRecord>(
+                                                                                    stream: UsersRecord.getDocument(listViewAnomaliRecord.userPostAnomali),
+                                                                                    builder: (context, snapshot) {
+                                                                                      // Customize what your widget looks like when it's loading.
+                                                                                      if (!snapshot.hasData) {
+                                                                                        return Center(
+                                                                                          child: SizedBox(
+                                                                                            width: 50,
+                                                                                            height: 50,
+                                                                                            child: CircularProgressIndicator(
+                                                                                              color: FlutterFlowTheme.of(context).primaryColor,
+                                                                                            ),
+                                                                                          ),
+                                                                                        );
+                                                                                      }
+                                                                                      final textUsersRecord = snapshot.data;
+                                                                                      return Text(
+                                                                                        textUsersRecord.displayName,
+                                                                                        style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                              fontFamily: 'Montserrat',
+                                                                                              fontSize: 10,
+                                                                                              fontWeight: FontWeight.w300,
+                                                                                            ),
+                                                                                      );
+                                                                                    },
+                                                                                  ),
+                                                                                ),
+                                                                              ],
+                                                                            ),
+                                                                            Row(
+                                                                              mainAxisSize: MainAxisSize.max,
+                                                                              mainAxisAlignment: MainAxisAlignment.start,
+                                                                              children: [
+                                                                                Icon(
+                                                                                  Icons.access_time,
+                                                                                  color: Color(0xFF507C78),
+                                                                                  size: 15,
+                                                                                ),
+                                                                                Padding(
+                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                  child: Text(
+                                                                                    dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
+                                                                                    style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                          fontFamily: 'Montserrat',
+                                                                                          fontSize: 10,
+                                                                                          fontWeight: FontWeight.w300,
+                                                                                        ),
+                                                                                  ),
+                                                                                ),
+                                                                              ],
+                                                                            ),
+                                                                          ],
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ),
+                                                            Container(
+                                                              width: 30,
+                                                              decoration:
+                                                                  BoxDecoration(),
                                                               child: Column(
                                                                 mainAxisSize:
                                                                     MainAxisSize
                                                                         .max,
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .center,
                                                                 children: [
-                                                                  Padding(
-                                                                    padding: EdgeInsetsDirectional
-                                                                        .fromSTEB(
-                                                                            0,
-                                                                            0,
-                                                                            0,
-                                                                            5),
-                                                                    child: Text(
-                                                                      listViewAnomaliRecord
-                                                                          .namaAnomali,
-                                                                      maxLines:
-                                                                          2,
-                                                                      style: FlutterFlowTheme.of(
-                                                                              context)
-                                                                          .bodyText1
-                                                                          .override(
-                                                                            fontFamily:
-                                                                                'Montserrat',
-                                                                            fontSize:
-                                                                                12,
-                                                                            fontWeight:
-                                                                                FontWeight.w300,
-                                                                          ),
-                                                                    ),
-                                                                  ),
-                                                                  Row(
-                                                                    mainAxisSize:
-                                                                        MainAxisSize
-                                                                            .max,
-                                                                    mainAxisAlignment:
-                                                                        MainAxisAlignment
-                                                                            .start,
-                                                                    children: [
-                                                                      Icon(
-                                                                        Icons
-                                                                            .tag,
-                                                                        color: Color(
-                                                                            0xFF507C78),
-                                                                        size:
-                                                                            15,
-                                                                      ),
-                                                                      Padding(
-                                                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                                                            5,
-                                                                            0,
-                                                                            0,
-                                                                            0),
-                                                                        child:
-                                                                            Text(
-                                                                          listViewAnomaliRecord
-                                                                              .tagAnomali,
-                                                                          style: FlutterFlowTheme.of(context)
-                                                                              .bodyText1
-                                                                              .override(
-                                                                                fontFamily: 'Montserrat',
-                                                                                fontSize: 10,
-                                                                                fontWeight: FontWeight.w100,
-                                                                              ),
-                                                                        ),
-                                                                      ),
-                                                                    ],
-                                                                  ),
-                                                                  Expanded(
-                                                                    child:
-                                                                        Align(
+                                                                  if ((listViewAnomaliRecord
+                                                                          .statusAnomali) ==
+                                                                      0)
+                                                                    Align(
                                                                       alignment:
                                                                           AlignmentDirectional(
                                                                               0,
                                                                               0),
                                                                       child:
-                                                                          Row(
-                                                                        mainAxisSize:
-                                                                            MainAxisSize.max,
-                                                                        mainAxisAlignment:
-                                                                            MainAxisAlignment.spaceEvenly,
-                                                                        children: [
-                                                                          Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
-                                                                            children: [
-                                                                              Icon(
-                                                                                Icons.person,
-                                                                                color: Color(0xFF507C78),
-                                                                                size: 15,
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                child: StreamBuilder<UsersRecord>(
-                                                                                  stream: UsersRecord.getDocument(listViewAnomaliRecord.userPostAnomali),
-                                                                                  builder: (context, snapshot) {
-                                                                                    // Customize what your widget looks like when it's loading.
-                                                                                    if (!snapshot.hasData) {
-                                                                                      return Center(
-                                                                                        child: SizedBox(
-                                                                                          width: 50,
-                                                                                          height: 50,
-                                                                                          child: CircularProgressIndicator(
-                                                                                            color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                          ),
-                                                                                        ),
-                                                                                      );
-                                                                                    }
-                                                                                    final textUsersRecord = snapshot.data;
-                                                                                    return Text(
-                                                                                      textUsersRecord.displayName,
-                                                                                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                            fontFamily: 'Montserrat',
-                                                                                            fontSize: 10,
-                                                                                            fontWeight: FontWeight.w300,
-                                                                                          ),
-                                                                                    );
-                                                                                  },
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                          Row(
-                                                                            mainAxisSize:
-                                                                                MainAxisSize.max,
-                                                                            mainAxisAlignment:
-                                                                                MainAxisAlignment.start,
-                                                                            children: [
-                                                                              Icon(
-                                                                                Icons.access_time,
-                                                                                color: Color(0xFF507C78),
-                                                                                size: 15,
-                                                                              ),
-                                                                              Padding(
-                                                                                padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                child: Text(
-                                                                                  dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
-                                                                                  style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                        fontFamily: 'Montserrat',
-                                                                                        fontSize: 10,
-                                                                                        fontWeight: FontWeight.w300,
-                                                                                      ),
-                                                                                ),
-                                                                              ),
-                                                                            ],
-                                                                          ),
-                                                                        ],
+                                                                          Container(
+                                                                        width:
+                                                                            15,
+                                                                        height:
+                                                                            15,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color:
+                                                                              Color(0xFF95341A),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(100),
+                                                                        ),
                                                                       ),
                                                                     ),
-                                                                  ),
+                                                                  if ((listViewAnomaliRecord
+                                                                          .statusAnomali) ==
+                                                                      1)
+                                                                    Align(
+                                                                      alignment:
+                                                                          AlignmentDirectional(
+                                                                              0,
+                                                                              0),
+                                                                      child:
+                                                                          Container(
+                                                                        width:
+                                                                            15,
+                                                                        height:
+                                                                            15,
+                                                                        decoration:
+                                                                            BoxDecoration(
+                                                                          color:
+                                                                              Color(0xFF2A8233),
+                                                                          borderRadius:
+                                                                              BorderRadius.circular(100),
+                                                                        ),
+                                                                      ),
+                                                                    ),
                                                                 ],
                                                               ),
                                                             ),
-                                                          ),
-                                                          Container(
-                                                            width: 30,
-                                                            decoration:
-                                                                BoxDecoration(),
-                                                            child: Column(
-                                                              mainAxisSize:
-                                                                  MainAxisSize
-                                                                      .max,
-                                                              mainAxisAlignment:
-                                                                  MainAxisAlignment
-                                                                      .center,
-                                                              children: [
-                                                                if ((listViewAnomaliRecord
-                                                                        .statusAnomali) ==
-                                                                    0)
-                                                                  Align(
-                                                                    alignment:
-                                                                        AlignmentDirectional(
-                                                                            0,
-                                                                            0),
-                                                                    child:
-                                                                        Container(
-                                                                      width: 15,
-                                                                      height:
-                                                                          15,
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        color: Color(
-                                                                            0xFF95341A),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(100),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                if ((listViewAnomaliRecord
-                                                                        .statusAnomali) ==
-                                                                    1)
-                                                                  Align(
-                                                                    alignment:
-                                                                        AlignmentDirectional(
-                                                                            0,
-                                                                            0),
-                                                                    child:
-                                                                        Container(
-                                                                      width: 15,
-                                                                      height:
-                                                                          15,
-                                                                      decoration:
-                                                                          BoxDecoration(
-                                                                        color: Color(
-                                                                            0xFF2A8233),
-                                                                        borderRadius:
-                                                                            BorderRadius.circular(100),
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                              ],
-                                                            ),
-                                                          ),
-                                                        ],
+                                                          ],
+                                                        ),
                                                       ),
                                                     ),
                                                   ),

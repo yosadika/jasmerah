@@ -39,6 +39,10 @@ abstract class AnomaliRecord
   DocumentReference get userPostAnomali;
 
   @nullable
+  @BuiltValueField(wireName: 'uid_ultg_anomali')
+  int get uidUltgAnomali;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -47,7 +51,8 @@ abstract class AnomaliRecord
     ..fotoAnomali = ''
     ..tagAnomali = ''
     ..statusAnomali = 0
-    ..vendorAnomali = 0;
+    ..vendorAnomali = 0
+    ..uidUltgAnomali = 0;
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('anomali');
@@ -78,6 +83,7 @@ Map<String, dynamic> createAnomaliRecordData({
   DateTime tanggalCreateAnomali,
   int vendorAnomali,
   DocumentReference userPostAnomali,
+  int uidUltgAnomali,
 }) =>
     serializers.toFirestore(
         AnomaliRecord.serializer,
@@ -88,4 +94,5 @@ Map<String, dynamic> createAnomaliRecordData({
           ..statusAnomali = statusAnomali
           ..tanggalCreateAnomali = tanggalCreateAnomali
           ..vendorAnomali = vendorAnomali
-          ..userPostAnomali = userPostAnomali));
+          ..userPostAnomali = userPostAnomali
+          ..uidUltgAnomali = uidUltgAnomali));
