@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "296366213193",
+    "firebase_url": "https://jasmerah-100a-default-rtdb.firebaseio.com",
+    "project_id": "jasmerah-100a",
+    "storage_bucket": "jasmerah-100a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:296366213193:android:33ebf40c1c062d28f45798",
+        "android_client_info": {
+          "package_name": "com.flutterflow.jasmerah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "296366213193-m8fs954qcnkrvqa3dtm6uisc1olbo7l1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flutterflow.jasmerah",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "296366213193-r94cn8s3ecso9t9ldt3d32vc223gdi3a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2-LHbK16IiptZFUbr-7DJ9AD8nkkwTDU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "296366213193-r94cn8s3ecso9t9ldt3d32vc223gdi3a.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "296366213193-27d9lmdl53masjmfqhbaj071ahvki8f7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flutterflow.jasmerah"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
