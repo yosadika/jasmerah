@@ -5,6 +5,9 @@ import '../flutter_flow/flutter_flow_util.dart';
 
 import 'schema/users_record.dart';
 import 'schema/anomali_record.dart';
+import 'schema/data_upt_record.dart';
+import 'schema/data_gardu_induk_record.dart';
+import 'schema/data_ultg_record.dart';
 import 'schema/serializers.dart';
 
 export 'dart:async' show StreamSubscription;
@@ -14,6 +17,9 @@ export 'schema/serializers.dart';
 
 export 'schema/users_record.dart';
 export 'schema/anomali_record.dart';
+export 'schema/data_upt_record.dart';
+export 'schema/data_gardu_induk_record.dart';
+export 'schema/data_ultg_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Stream<List<UsersRecord>> queryUsersRecord({
@@ -93,6 +99,132 @@ Future<FFFirestorePage<AnomaliRecord>> queryAnomaliRecordPage({
     queryCollectionPage(
       AnomaliRecord.collection,
       AnomaliRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query DataUptRecords (as a Stream and as a Future).
+Stream<List<DataUptRecord>> queryDataUptRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      DataUptRecord.collection,
+      DataUptRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<DataUptRecord>> queryDataUptRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      DataUptRecord.collection,
+      DataUptRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<DataUptRecord>> queryDataUptRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      DataUptRecord.collection,
+      DataUptRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query DataGarduIndukRecords (as a Stream and as a Future).
+Stream<List<DataGarduIndukRecord>> queryDataGarduIndukRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      DataGarduIndukRecord.collection,
+      DataGarduIndukRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<DataGarduIndukRecord>> queryDataGarduIndukRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      DataGarduIndukRecord.collection,
+      DataGarduIndukRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<DataGarduIndukRecord>> queryDataGarduIndukRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      DataGarduIndukRecord.collection,
+      DataGarduIndukRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query DataUltgRecords (as a Stream and as a Future).
+Stream<List<DataUltgRecord>> queryDataUltgRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      DataUltgRecord.collection,
+      DataUltgRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<DataUltgRecord>> queryDataUltgRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      DataUltgRecord.collection,
+      DataUltgRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<DataUltgRecord>> queryDataUltgRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      DataUltgRecord.collection,
+      DataUltgRecord.serializer,
       queryBuilder: queryBuilder,
       nextPageMarker: nextPageMarker,
       pageSize: pageSize,
