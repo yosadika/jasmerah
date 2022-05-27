@@ -15,10 +15,6 @@ abstract class AnomaliRecord
   String get namaAnomali;
 
   @nullable
-  @BuiltValueField(wireName: 'user_post_anomali')
-  DocumentReference get userPostAnomali;
-
-  @nullable
   @BuiltValueField(wireName: 'foto_anomali')
   String get fotoAnomali;
 
@@ -37,6 +33,10 @@ abstract class AnomaliRecord
   @nullable
   @BuiltValueField(wireName: 'vendor_anomali')
   int get vendorAnomali;
+
+  @nullable
+  @BuiltValueField(wireName: 'user_post_anomali')
+  DocumentReference get userPostAnomali;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -72,20 +72,20 @@ abstract class AnomaliRecord
 
 Map<String, dynamic> createAnomaliRecordData({
   String namaAnomali,
-  DocumentReference userPostAnomali,
   String fotoAnomali,
   String tagAnomali,
   int statusAnomali,
   DateTime tanggalCreateAnomali,
   int vendorAnomali,
+  DocumentReference userPostAnomali,
 }) =>
     serializers.toFirestore(
         AnomaliRecord.serializer,
         AnomaliRecord((a) => a
           ..namaAnomali = namaAnomali
-          ..userPostAnomali = userPostAnomali
           ..fotoAnomali = fotoAnomali
           ..tagAnomali = tagAnomali
           ..statusAnomali = statusAnomali
           ..tanggalCreateAnomali = tanggalCreateAnomali
-          ..vendorAnomali = vendorAnomali));
+          ..vendorAnomali = vendorAnomali
+          ..userPostAnomali = userPostAnomali));
