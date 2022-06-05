@@ -5,6 +5,18 @@ import 'anomali_record.dart';
 import 'data_upt_record.dart';
 import 'data_gardu_induk_record.dart';
 import 'data_ultg_record.dart';
+import 'data_jabatan_record.dart';
+import 'collections_name_record.dart';
+import 'data_foto_anomali_record.dart';
+import 'data_bay_record.dart';
+import 'data_peralatan_gardu_record.dart';
+import 'data_sub_peralatan_gardu_record.dart';
+import 'anomali_scheduled_record.dart';
+import 'buku_wiring_record.dart';
+import 'kategori_peralatan_record.dart';
+import 'data_alat_uji_record.dart';
+import 'data_material_gudang_record.dart';
+import 'data_k2lh_record.dart';
 
 import 'index.dart';
 
@@ -20,6 +32,18 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   DataUptRecord,
   DataGarduIndukRecord,
   DataUltgRecord,
+  DataJabatanRecord,
+  CollectionsNameRecord,
+  DataFotoAnomaliRecord,
+  DataBayRecord,
+  DataPeralatanGarduRecord,
+  DataSubPeralatanGarduRecord,
+  AnomaliScheduledRecord,
+  BukuWiringRecord,
+  KategoriPeralatanRecord,
+  DataAlatUjiRecord,
+  DataMaterialGudangRecord,
+  DataK2lhRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

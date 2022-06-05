@@ -20,12 +20,17 @@ abstract class DataUltgRecord
   int get uidUltg;
 
   @nullable
+  @BuiltValueField(wireName: 'simbol_ultg')
+  String get simbolUltg;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(DataUltgRecordBuilder builder) => builder
     ..namaUltg = ''
-    ..uidUltg = 0;
+    ..uidUltg = 0
+    ..simbolUltg = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('data_ultg');
@@ -51,9 +56,11 @@ abstract class DataUltgRecord
 Map<String, dynamic> createDataUltgRecordData({
   String namaUltg,
   int uidUltg,
+  String simbolUltg,
 }) =>
     serializers.toFirestore(
         DataUltgRecord.serializer,
         DataUltgRecord((d) => d
           ..namaUltg = namaUltg
-          ..uidUltg = uidUltg));
+          ..uidUltg = uidUltg
+          ..simbolUltg = simbolUltg));

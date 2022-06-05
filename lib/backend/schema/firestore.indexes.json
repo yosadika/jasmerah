@@ -1,3 +1,18 @@
 {
-  "indexes": []
+  "indexes": [
+    {
+      "collectionGroup": "anomali",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "bay_location_anomali",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "tanggal_create_anomali",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ]
 }

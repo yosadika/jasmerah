@@ -27,6 +27,10 @@ abstract class DataUptRecord
   int get uidUpt;
 
   @nullable
+  @BuiltValueField(wireName: 'simbol_upt')
+  String get simbolUpt;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -34,7 +38,8 @@ abstract class DataUptRecord
     ..namaUpt = ''
     ..alamatUpt = ''
     ..nomorTeleponUpt = 0
-    ..uidUpt = 0;
+    ..uidUpt = 0
+    ..simbolUpt = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('data_upt');
@@ -62,6 +67,7 @@ Map<String, dynamic> createDataUptRecordData({
   String alamatUpt,
   int nomorTeleponUpt,
   int uidUpt,
+  String simbolUpt,
 }) =>
     serializers.toFirestore(
         DataUptRecord.serializer,
@@ -69,4 +75,5 @@ Map<String, dynamic> createDataUptRecordData({
           ..namaUpt = namaUpt
           ..alamatUpt = alamatUpt
           ..nomorTeleponUpt = nomorTeleponUpt
-          ..uidUpt = uidUpt));
+          ..uidUpt = uidUpt
+          ..simbolUpt = simbolUpt));

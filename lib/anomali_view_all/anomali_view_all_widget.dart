@@ -1,4 +1,3 @@
-import '../anomali_detail/anomali_detail_widget.dart';
 import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
@@ -60,7 +59,17 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                 size: 30,
                               ),
                               onPressed: () async {
-                                Navigator.pop(context);
+                                context.pushNamed(
+                                  'MenuAnomali',
+                                  extra: <String, dynamic>{
+                                    kTransitionInfoKey: TransitionInfo(
+                                      hasTransition: true,
+                                      transitionType:
+                                          PageTransitionType.leftToRight,
+                                      duration: Duration(milliseconds: 500),
+                                    ),
+                                  },
+                                );
                               },
                             ),
                           ),
@@ -108,8 +117,19 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                       ),
                                     ),
                                     FFButtonWidget(
-                                      onPressed: () {
-                                        print('Button pressed ...');
+                                      onPressed: () async {
+                                        context.pushNamed(
+                                          'AnomaliTugasSaya',
+                                          extra: <String, dynamic>{
+                                            kTransitionInfoKey: TransitionInfo(
+                                              hasTransition: true,
+                                              transitionType:
+                                                  PageTransitionType.fade,
+                                              duration:
+                                                  Duration(milliseconds: 500),
+                                            ),
+                                          },
+                                        );
                                       },
                                       text: 'Tugas Saya',
                                       options: FFButtonOptions(
@@ -220,8 +240,38 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                           obscureText: false,
                                                           decoration:
                                                               InputDecoration(
-                                                            labelText:
+                                                            labelStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Montserrat',
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          10,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w300,
+                                                                    ),
+                                                            hintText:
                                                                 'cari anomali, wiring, dan peralatan di sini',
+                                                            hintStyle:
+                                                                FlutterFlowTheme.of(
+                                                                        context)
+                                                                    .bodyText1
+                                                                    .override(
+                                                                      fontFamily:
+                                                                          'Montserrat',
+                                                                      color: Colors
+                                                                          .white,
+                                                                      fontSize:
+                                                                          10,
+                                                                      fontWeight:
+                                                                          FontWeight
+                                                                              .w300,
+                                                                    ),
                                                             enabledBorder:
                                                                 UnderlineInputBorder(
                                                               borderSide:
@@ -321,8 +371,21 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               showLoadingIndicator: false,
                                             ),
                                             FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                  'AnomaliViewAllSelesai',
+                                                  extra: <String, dynamic>{
+                                                    kTransitionInfoKey:
+                                                        TransitionInfo(
+                                                      hasTransition: true,
+                                                      transitionType:
+                                                          PageTransitionType
+                                                              .fade,
+                                                      duration: Duration(
+                                                          milliseconds: 500),
+                                                    ),
+                                                  },
+                                                );
                                               },
                                               text: 'Selesai',
                                               options: FFButtonOptions(
@@ -350,8 +413,21 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               showLoadingIndicator: false,
                                             ),
                                             FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                  'AnomaliViewAllProses',
+                                                  extra: <String, dynamic>{
+                                                    kTransitionInfoKey:
+                                                        TransitionInfo(
+                                                      hasTransition: true,
+                                                      transitionType:
+                                                          PageTransitionType
+                                                              .fade,
+                                                      duration: Duration(
+                                                          milliseconds: 500),
+                                                    ),
+                                                  },
+                                                );
                                               },
                                               text: 'Proses',
                                               options: FFButtonOptions(
@@ -379,8 +455,21 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               showLoadingIndicator: false,
                                             ),
                                             FFButtonWidget(
-                                              onPressed: () {
-                                                print('Button pressed ...');
+                                              onPressed: () async {
+                                                context.pushNamed(
+                                                  'AnomaliViewAllBerulang',
+                                                  extra: <String, dynamic>{
+                                                    kTransitionInfoKey:
+                                                        TransitionInfo(
+                                                      hasTransition: true,
+                                                      transitionType:
+                                                          PageTransitionType
+                                                              .fade,
+                                                      duration: Duration(
+                                                          milliseconds: 500),
+                                                    ),
+                                                  },
+                                                );
                                               },
                                               text: 'Berulang',
                                               options: FFButtonOptions(
@@ -446,6 +535,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Montserrat',
+                                      color: Colors.black,
                                       fontSize: 12,
                                       fontWeight: FontWeight.w300,
                                     ),
@@ -477,6 +567,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               .bodyText1
                                               .override(
                                                 fontFamily: 'Montserrat',
+                                                color: Colors.black,
                                                 fontSize: 10,
                                                 fontWeight: FontWeight.w300,
                                               ),
@@ -487,6 +578,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               .bodyText1
                                               .override(
                                                 fontFamily: 'Montserrat',
+                                                color: Colors.black,
                                                 fontSize: 10,
                                                 fontWeight: FontWeight.w300,
                                               ),
@@ -519,11 +611,10 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                   if (!snapshot.hasData) {
                                     return Center(
                                       child: SizedBox(
-                                        width: 50,
-                                        height: 50,
+                                        width: 30,
+                                        height: 30,
                                         child: CircularProgressIndicator(
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
+                                          color: Color(0xB3385754),
                                         ),
                                       ),
                                     );
@@ -546,25 +637,29 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               0)
                                             Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(10, 2, 10, 2),
+                                                  .fromSTEB(10, 4, 10, 4),
                                               child: InkWell(
                                                 onTap: () async {
-                                                  await Navigator.push(
-                                                    context,
-                                                    PageTransition(
-                                                      type: PageTransitionType
-                                                          .rightToLeft,
-                                                      duration: Duration(
-                                                          milliseconds: 500),
-                                                      reverseDuration: Duration(
-                                                          milliseconds: 500),
-                                                      child:
-                                                          AnomaliDetailWidget(
-                                                        anomaliDetails:
-                                                            listViewAnomaliRecord
-                                                                .reference,
+                                                  context.pushNamed(
+                                                    'AnomaliDetail',
+                                                    queryParams: {
+                                                      'anomaliDetails': serializeParam(
+                                                          listViewAnomaliRecord
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference),
+                                                    }.withoutNulls,
+                                                    extra: <String, dynamic>{
+                                                      kTransitionInfoKey:
+                                                          TransitionInfo(
+                                                        hasTransition: true,
+                                                        transitionType:
+                                                            PageTransitionType
+                                                                .rightToLeft,
+                                                        duration: Duration(
+                                                            milliseconds: 500),
                                                       ),
-                                                    ),
+                                                    },
                                                   );
                                                 },
                                                 child: Container(
@@ -669,6 +764,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                             .bodyText1
                                                                             .override(
                                                                               fontFamily: 'Montserrat',
+                                                                              color: Colors.black,
                                                                               fontSize: 12,
                                                                               fontWeight: FontWeight.w300,
                                                                             ),
@@ -701,6 +797,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                             listViewAnomaliRecord.tagAnomali,
                                                                             style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                   fontFamily: 'Montserrat',
+                                                                                  color: Colors.black,
                                                                                   fontSize: 10,
                                                                                   fontWeight: FontWeight.w100,
                                                                                 ),
@@ -719,69 +816,67 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceEvenly,
+                                                                              MainAxisAlignment.start,
                                                                           children: [
-                                                                            Row(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              mainAxisAlignment: MainAxisAlignment.start,
-                                                                              children: [
-                                                                                Icon(
-                                                                                  Icons.person,
-                                                                                  color: Color(0xFF507C78),
-                                                                                  size: 15,
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                  child: StreamBuilder<UsersRecord>(
-                                                                                    stream: UsersRecord.getDocument(listViewAnomaliRecord.userPostAnomali),
-                                                                                    builder: (context, snapshot) {
-                                                                                      // Customize what your widget looks like when it's loading.
-                                                                                      if (!snapshot.hasData) {
-                                                                                        return Center(
-                                                                                          child: SizedBox(
-                                                                                            width: 50,
-                                                                                            height: 50,
-                                                                                            child: CircularProgressIndicator(
-                                                                                              color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                            ),
-                                                                                          ),
-                                                                                        );
-                                                                                      }
-                                                                                      final textUsersRecord = snapshot.data;
-                                                                                      return Text(
-                                                                                        textUsersRecord.displayName,
+                                                                            Expanded(
+                                                                              flex: 1,
+                                                                              child: Padding(
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
+                                                                                child: Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                                                  children: [
+                                                                                    Icon(
+                                                                                      Icons.person,
+                                                                                      color: Color(0xFF507C78),
+                                                                                      size: 15,
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                      child: Text(
+                                                                                        valueOrDefault<String>(
+                                                                                          listViewAnomaliRecord.userPostAnomali,
+                                                                                          'User Unknown',
+                                                                                        ),
+                                                                                        maxLines: 1,
                                                                                         style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                               fontFamily: 'Montserrat',
+                                                                                              color: Colors.black,
                                                                                               fontSize: 10,
                                                                                               fontWeight: FontWeight.w300,
                                                                                             ),
-                                                                                      );
-                                                                                    },
-                                                                                  ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
                                                                                 ),
-                                                                              ],
+                                                                              ),
                                                                             ),
-                                                                            Row(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              mainAxisAlignment: MainAxisAlignment.start,
-                                                                              children: [
-                                                                                Icon(
-                                                                                  Icons.access_time,
-                                                                                  color: Color(0xFF507C78),
-                                                                                  size: 15,
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                  child: Text(
-                                                                                    dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
-                                                                                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                          fontFamily: 'Montserrat',
-                                                                                          fontSize: 10,
-                                                                                          fontWeight: FontWeight.w300,
-                                                                                        ),
+                                                                            Expanded(
+                                                                              flex: 1,
+                                                                              child: Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                                                children: [
+                                                                                  Icon(
+                                                                                    Icons.access_time,
+                                                                                    color: Color(0xFF507C78),
+                                                                                    size: 15,
                                                                                   ),
-                                                                                ),
-                                                                              ],
+                                                                                  Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                    child: Text(
+                                                                                      dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
+                                                                                      maxLines: 1,
+                                                                                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: Colors.black,
+                                                                                            fontSize: 10,
+                                                                                            fontWeight: FontWeight.w300,
+                                                                                          ),
+                                                                                    ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
                                                                             ),
                                                                           ],
                                                                         ),
@@ -865,25 +960,29 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                               1)
                                             Padding(
                                               padding: EdgeInsetsDirectional
-                                                  .fromSTEB(10, 2, 10, 2),
+                                                  .fromSTEB(10, 4, 10, 4),
                                               child: InkWell(
                                                 onTap: () async {
-                                                  await Navigator.push(
-                                                    context,
-                                                    PageTransition(
-                                                      type: PageTransitionType
-                                                          .rightToLeft,
-                                                      duration: Duration(
-                                                          milliseconds: 500),
-                                                      reverseDuration: Duration(
-                                                          milliseconds: 500),
-                                                      child:
-                                                          AnomaliDetailWidget(
-                                                        anomaliDetails:
-                                                            listViewAnomaliRecord
-                                                                .reference,
+                                                  context.pushNamed(
+                                                    'AnomaliDetail',
+                                                    queryParams: {
+                                                      'anomaliDetails': serializeParam(
+                                                          listViewAnomaliRecord
+                                                              .reference,
+                                                          ParamType
+                                                              .DocumentReference),
+                                                    }.withoutNulls,
+                                                    extra: <String, dynamic>{
+                                                      kTransitionInfoKey:
+                                                          TransitionInfo(
+                                                        hasTransition: true,
+                                                        transitionType:
+                                                            PageTransitionType
+                                                                .rightToLeft,
+                                                        duration: Duration(
+                                                            milliseconds: 500),
                                                       ),
-                                                    ),
+                                                    },
                                                   );
                                                 },
                                                 child: Container(
@@ -988,6 +1087,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                             .bodyText1
                                                                             .override(
                                                                               fontFamily: 'Montserrat',
+                                                                              color: Colors.black,
                                                                               fontSize: 12,
                                                                               fontWeight: FontWeight.w300,
                                                                             ),
@@ -1020,6 +1120,7 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                             listViewAnomaliRecord.tagAnomali,
                                                                             style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                   fontFamily: 'Montserrat',
+                                                                                  color: Colors.black,
                                                                                   fontSize: 10,
                                                                                   fontWeight: FontWeight.w100,
                                                                                 ),
@@ -1038,69 +1139,67 @@ class _AnomaliViewAllWidgetState extends State<AnomaliViewAllWidget> {
                                                                           mainAxisSize:
                                                                               MainAxisSize.max,
                                                                           mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceEvenly,
+                                                                              MainAxisAlignment.start,
                                                                           children: [
-                                                                            Row(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              mainAxisAlignment: MainAxisAlignment.start,
-                                                                              children: [
-                                                                                Icon(
-                                                                                  Icons.person,
-                                                                                  color: Color(0xFF507C78),
-                                                                                  size: 15,
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                  child: StreamBuilder<UsersRecord>(
-                                                                                    stream: UsersRecord.getDocument(listViewAnomaliRecord.userPostAnomali),
-                                                                                    builder: (context, snapshot) {
-                                                                                      // Customize what your widget looks like when it's loading.
-                                                                                      if (!snapshot.hasData) {
-                                                                                        return Center(
-                                                                                          child: SizedBox(
-                                                                                            width: 50,
-                                                                                            height: 50,
-                                                                                            child: CircularProgressIndicator(
-                                                                                              color: FlutterFlowTheme.of(context).primaryColor,
-                                                                                            ),
-                                                                                          ),
-                                                                                        );
-                                                                                      }
-                                                                                      final textUsersRecord = snapshot.data;
-                                                                                      return Text(
-                                                                                        textUsersRecord.displayName,
+                                                                            Expanded(
+                                                                              flex: 1,
+                                                                              child: Padding(
+                                                                                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 15, 0),
+                                                                                child: Row(
+                                                                                  mainAxisSize: MainAxisSize.max,
+                                                                                  mainAxisAlignment: MainAxisAlignment.start,
+                                                                                  children: [
+                                                                                    Icon(
+                                                                                      Icons.person,
+                                                                                      color: Color(0xFF507C78),
+                                                                                      size: 15,
+                                                                                    ),
+                                                                                    Padding(
+                                                                                      padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                      child: Text(
+                                                                                        valueOrDefault<String>(
+                                                                                          listViewAnomaliRecord.userPostAnomali,
+                                                                                          'User Unknown',
+                                                                                        ),
+                                                                                        maxLines: 1,
                                                                                         style: FlutterFlowTheme.of(context).bodyText1.override(
                                                                                               fontFamily: 'Montserrat',
+                                                                                              color: Colors.black,
                                                                                               fontSize: 10,
                                                                                               fontWeight: FontWeight.w300,
                                                                                             ),
-                                                                                      );
-                                                                                    },
-                                                                                  ),
+                                                                                      ),
+                                                                                    ),
+                                                                                  ],
                                                                                 ),
-                                                                              ],
+                                                                              ),
                                                                             ),
-                                                                            Row(
-                                                                              mainAxisSize: MainAxisSize.max,
-                                                                              mainAxisAlignment: MainAxisAlignment.start,
-                                                                              children: [
-                                                                                Icon(
-                                                                                  Icons.access_time,
-                                                                                  color: Color(0xFF507C78),
-                                                                                  size: 15,
-                                                                                ),
-                                                                                Padding(
-                                                                                  padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
-                                                                                  child: Text(
-                                                                                    dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
-                                                                                    style: FlutterFlowTheme.of(context).bodyText1.override(
-                                                                                          fontFamily: 'Montserrat',
-                                                                                          fontSize: 10,
-                                                                                          fontWeight: FontWeight.w300,
-                                                                                        ),
+                                                                            Expanded(
+                                                                              flex: 1,
+                                                                              child: Row(
+                                                                                mainAxisSize: MainAxisSize.max,
+                                                                                mainAxisAlignment: MainAxisAlignment.start,
+                                                                                children: [
+                                                                                  Icon(
+                                                                                    Icons.access_time,
+                                                                                    color: Color(0xFF507C78),
+                                                                                    size: 15,
                                                                                   ),
-                                                                                ),
-                                                                              ],
+                                                                                  Padding(
+                                                                                    padding: EdgeInsetsDirectional.fromSTEB(5, 0, 0, 0),
+                                                                                    child: Text(
+                                                                                      dateTimeFormat('d/M/y', listViewAnomaliRecord.tanggalCreateAnomali),
+                                                                                      maxLines: 1,
+                                                                                      style: FlutterFlowTheme.of(context).bodyText1.override(
+                                                                                            fontFamily: 'Montserrat',
+                                                                                            color: Colors.black,
+                                                                                            fontSize: 10,
+                                                                                            fontWeight: FontWeight.w300,
+                                                                                          ),
+                                                                                    ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
                                                                             ),
                                                                           ],
                                                                         ),

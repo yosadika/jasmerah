@@ -32,6 +32,26 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
   String get phoneNumber;
 
   @nullable
+  @BuiltValueField(wireName: 'user_role')
+  String get userRole;
+
+  @nullable
+  @BuiltValueField(wireName: 'user_role_list')
+  BuiltList<String> get userRoleList;
+
+  @nullable
+  @BuiltValueField(wireName: 'user_jabatan')
+  String get userJabatan;
+
+  @nullable
+  @BuiltValueField(wireName: 'user_work_location')
+  String get userWorkLocation;
+
+  @nullable
+  @BuiltValueField(wireName: 'user_word_location_char')
+  String get userWordLocationChar;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -40,7 +60,12 @@ abstract class UsersRecord implements Built<UsersRecord, UsersRecordBuilder> {
     ..displayName = ''
     ..photoUrl = ''
     ..uid = ''
-    ..phoneNumber = '';
+    ..phoneNumber = ''
+    ..userRole = ''
+    ..userRoleList = ListBuilder()
+    ..userJabatan = ''
+    ..userWorkLocation = ''
+    ..userWordLocationChar = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('users');
@@ -70,6 +95,10 @@ Map<String, dynamic> createUsersRecordData({
   String uid,
   DateTime createdTime,
   String phoneNumber,
+  String userRole,
+  String userJabatan,
+  String userWorkLocation,
+  String userWordLocationChar,
 }) =>
     serializers.toFirestore(
         UsersRecord.serializer,
@@ -79,4 +108,9 @@ Map<String, dynamic> createUsersRecordData({
           ..photoUrl = photoUrl
           ..uid = uid
           ..createdTime = createdTime
-          ..phoneNumber = phoneNumber));
+          ..phoneNumber = phoneNumber
+          ..userRole = userRole
+          ..userRoleList = null
+          ..userJabatan = userJabatan
+          ..userWorkLocation = userWorkLocation
+          ..userWordLocationChar = userWordLocationChar));
