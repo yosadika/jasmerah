@@ -40,6 +40,10 @@ abstract class BukuWiringRecord
   String get merkBukuWiring;
 
   @nullable
+  @BuiltValueField(wireName: 'lokasiBay_bukuWiring')
+  String get lokasiBayBukuWiring;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -48,7 +52,8 @@ abstract class BukuWiringRecord
     ..kategoriBukuBukuwiring = ''
     ..fileBukuBukuWiring = ''
     ..countViewBukuWiring = 0
-    ..merkBukuWiring = '';
+    ..merkBukuWiring = ''
+    ..lokasiBayBukuWiring = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('bukuWiring');
@@ -79,6 +84,7 @@ Map<String, dynamic> createBukuWiringRecordData({
   int countViewBukuWiring,
   DateTime tanggalUploadBukuWiring,
   String merkBukuWiring,
+  String lokasiBayBukuWiring,
 }) =>
     serializers.toFirestore(
         BukuWiringRecord.serializer,
@@ -89,4 +95,5 @@ Map<String, dynamic> createBukuWiringRecordData({
           ..terakhirDilihatBukuWiring = terakhirDilihatBukuWiring
           ..countViewBukuWiring = countViewBukuWiring
           ..tanggalUploadBukuWiring = tanggalUploadBukuWiring
-          ..merkBukuWiring = merkBukuWiring));
+          ..merkBukuWiring = merkBukuWiring
+          ..lokasiBayBukuWiring = lokasiBayBukuWiring));

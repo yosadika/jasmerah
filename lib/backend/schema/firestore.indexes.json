@@ -27,16 +27,50 @@
           "order": "DESCENDING"
         }
       ]
-    }
-  ],
-  "fieldOverrides": [
+    },
     {
-      "collectionGroup": "fcm_tokens",
-      "fieldPath": "fcm_token",
-      "indexes": [
+      "collectionGroup": "data_gardu_induk",
+      "queryScope": "COLLECTION",
+      "fields": [
         {
-          "order": "ASCENDING",
-          "queryScope": "COLLECTION_GROUP"
+          "fieldPath": "ultg_garduInduk",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nama_gardu_induk",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "data_bay",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "bay_nama_gardu",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "bay_kategori_bay",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "bay_nama_bay",
+          "order": "ASCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "bukuWiring",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "lokasiBay_bukuWiring",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "tanggalUpload_bukuWiring",
+          "order": "DESCENDING"
         }
       ]
     }

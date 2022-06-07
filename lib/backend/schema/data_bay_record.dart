@@ -27,6 +27,10 @@ abstract class DataBayRecord
   int get bayAnomaliCount;
 
   @nullable
+  @BuiltValueField(wireName: 'bay_kategoriSingkat_bay')
+  String get bayKategoriSingkatBay;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
@@ -34,7 +38,8 @@ abstract class DataBayRecord
     ..bayNamaBay = ''
     ..bayKategoriBay = ''
     ..bayNamaGardu = ''
-    ..bayAnomaliCount = 0;
+    ..bayAnomaliCount = 0
+    ..bayKategoriSingkatBay = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('data_bay');
@@ -62,6 +67,7 @@ Map<String, dynamic> createDataBayRecordData({
   String bayKategoriBay,
   String bayNamaGardu,
   int bayAnomaliCount,
+  String bayKategoriSingkatBay,
 }) =>
     serializers.toFirestore(
         DataBayRecord.serializer,
@@ -69,4 +75,5 @@ Map<String, dynamic> createDataBayRecordData({
           ..bayNamaBay = bayNamaBay
           ..bayKategoriBay = bayKategoriBay
           ..bayNamaGardu = bayNamaGardu
-          ..bayAnomaliCount = bayAnomaliCount));
+          ..bayAnomaliCount = bayAnomaliCount
+          ..bayKategoriSingkatBay = bayKategoriSingkatBay));

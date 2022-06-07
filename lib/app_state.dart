@@ -38,6 +38,10 @@ class FFAppState {
   }
 
   bool booleanHelper = false;
+
+  List<int> bebanTeganganAxis = [149, 148, 148, 148, 152, 147, 152];
+
+  List<int> bebanArusAxis = [427, 340, 348, 354, 401, 491, 454];
 }
 
 LatLng _latLngFromString(String val) {

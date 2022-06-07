@@ -6,8 +6,7 @@ import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
 import '../../backend/backend.dart';
 import '../../auth/firebase_user_provider.dart';
-import '../../backend/push_notifications/push_notifications_handler.dart'
-    show PushNotificationsHandler;
+
 import '../../backend/firebase_dynamic_links/firebase_dynamic_links.dart'
     show DynamicLinksHandler;
 import '../../index.dart';
@@ -220,7 +219,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'dasborBay',
               path: 'dasborBay',
               requireAuth: true,
-              builder: (context, params) => DasborBayWidget(),
+              builder: (context, params) => DasborBayWidget(
+                parameterBayDetail: params.getParam('parameterBayDetail',
+                    ParamType.DocumentReference, 'data_bay'),
+              ),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
@@ -395,8 +397,7 @@ class FFRoute {
                     ),
                   ),
                 )
-              : PushNotificationsHandler(
-                  child: DynamicLinksHandler(child: page));
+              : DynamicLinksHandler(child: page);
 
           final transitionInfo = state.transitionInfo;
           return transitionInfo.hasTransition

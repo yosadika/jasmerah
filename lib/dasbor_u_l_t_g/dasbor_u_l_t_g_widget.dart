@@ -441,11 +441,15 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                             DataGarduIndukRecord>>(
                                                       stream:
                                                           queryDataGarduIndukRecord(
-                                                        queryBuilder:
-                                                            (dataGarduIndukRecord) =>
-                                                                dataGarduIndukRecord
-                                                                    .orderBy(
-                                                                        'nama_gardu_induk'),
+                                                        queryBuilder: (dataGarduIndukRecord) =>
+                                                            dataGarduIndukRecord
+                                                                .where(
+                                                                    'ultg_garduInduk',
+                                                                    isEqualTo:
+                                                                        dasborULTGDataUltgRecord
+                                                                            .namaUltg)
+                                                                .orderBy(
+                                                                    'nama_gardu_induk'),
                                                       ),
                                                       builder:
                                                           (context, snapshot) {
