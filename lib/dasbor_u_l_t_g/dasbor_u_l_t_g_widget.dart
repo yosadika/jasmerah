@@ -5,6 +5,7 @@ import '../flutter_flow/flutter_flow_util.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class DasborULTGWidget extends StatefulWidget {
@@ -21,9 +22,6 @@ class DasborULTGWidget extends StatefulWidget {
 
 class _DasborULTGWidgetState extends State<DasborULTGWidget> {
   PageController pageViewController;
-  double sliderValue1;
-  double sliderValue2;
-  double sliderValue3;
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -1027,6 +1025,7 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                               .bodyText1
                                                                               .override(
                                                                                 fontFamily: 'Montserrat',
+                                                                                color: Colors.black,
                                                                                 fontSize: 12,
                                                                                 fontWeight: FontWeight.normal,
                                                                               ),
@@ -1047,6 +1046,7 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                             .bodyText1
                                                                             .override(
                                                                               fontFamily: 'Montserrat',
+                                                                              color: Colors.black,
                                                                               fontSize: 10,
                                                                               fontWeight: FontWeight.w300,
                                                                             ),
@@ -1087,31 +1087,44 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                         0),
                                                               ),
                                                             ),
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10,
-                                                                          0,
-                                                                          10,
-                                                                          0),
-                                                              child: Slider(
-                                                                activeColor: Color(
-                                                                    0xFFEFEFEF),
-                                                                inactiveColor:
+                                                            child: Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0, 0),
+                                                              child:
+                                                                  LinearPercentIndicator(
+                                                                percent: 0.8,
+                                                                width: 120,
+                                                                lineHeight: 10,
+                                                                animation: true,
+                                                                progressColor:
+                                                                    Colors
+                                                                        .white,
+                                                                backgroundColor:
                                                                     Color(
-                                                                        0xFF9E9E9E),
-                                                                min: 0,
-                                                                max: 100,
-                                                                value:
-                                                                    sliderValue1 ??=
-                                                                        80,
-                                                                onChanged:
-                                                                    (newValue) {
-                                                                  setState(() =>
-                                                                      sliderValue1 =
-                                                                          newValue);
-                                                                },
+                                                                        0xB22B3237),
+                                                                center: Text(
+                                                                  '80%',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Montserrat',
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontSize:
+                                                                            8,
+                                                                        fontWeight:
+                                                                            FontWeight.w300,
+                                                                      ),
+                                                                ),
+                                                                barRadius: Radius
+                                                                    .circular(
+                                                                        20),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .zero,
                                                               ),
                                                             ),
                                                           ),
@@ -1188,6 +1201,7 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                               .bodyText1
                                                                               .override(
                                                                                 fontFamily: 'Montserrat',
+                                                                                color: Colors.black,
                                                                                 fontSize: 12,
                                                                                 fontWeight: FontWeight.normal,
                                                                               ),
@@ -1208,6 +1222,7 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                             .bodyText1
                                                                             .override(
                                                                               fontFamily: 'Montserrat',
+                                                                              color: Colors.black,
                                                                               fontSize: 10,
                                                                               fontWeight: FontWeight.w300,
                                                                             ),
@@ -1248,31 +1263,44 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                         0),
                                                               ),
                                                             ),
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10,
-                                                                          0,
-                                                                          10,
-                                                                          0),
-                                                              child: Slider(
-                                                                activeColor: Color(
-                                                                    0xFFEFEFEF),
-                                                                inactiveColor:
+                                                            child: Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0, 0),
+                                                              child:
+                                                                  LinearPercentIndicator(
+                                                                percent: 0.8,
+                                                                width: 120,
+                                                                lineHeight: 10,
+                                                                animation: true,
+                                                                progressColor:
+                                                                    Colors
+                                                                        .white,
+                                                                backgroundColor:
                                                                     Color(
-                                                                        0xFF9E9E9E),
-                                                                min: 0,
-                                                                max: 100,
-                                                                value:
-                                                                    sliderValue2 ??=
-                                                                        80,
-                                                                onChanged:
-                                                                    (newValue) {
-                                                                  setState(() =>
-                                                                      sliderValue2 =
-                                                                          newValue);
-                                                                },
+                                                                        0xB22B3237),
+                                                                center: Text(
+                                                                  '80%',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Montserrat',
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontSize:
+                                                                            8,
+                                                                        fontWeight:
+                                                                            FontWeight.w300,
+                                                                      ),
+                                                                ),
+                                                                barRadius: Radius
+                                                                    .circular(
+                                                                        20),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .zero,
                                                               ),
                                                             ),
                                                           ),
@@ -1349,6 +1377,7 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                               .bodyText1
                                                                               .override(
                                                                                 fontFamily: 'Montserrat',
+                                                                                color: Colors.black,
                                                                                 fontSize: 12,
                                                                                 fontWeight: FontWeight.normal,
                                                                               ),
@@ -1369,6 +1398,7 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                             .bodyText1
                                                                             .override(
                                                                               fontFamily: 'Montserrat',
+                                                                              color: Colors.black,
                                                                               fontSize: 10,
                                                                               fontWeight: FontWeight.w300,
                                                                             ),
@@ -1409,31 +1439,220 @@ class _DasborULTGWidgetState extends State<DasborULTGWidget> {
                                                                         0),
                                                               ),
                                                             ),
-                                                            child: Padding(
-                                                              padding:
-                                                                  EdgeInsetsDirectional
-                                                                      .fromSTEB(
-                                                                          10,
-                                                                          0,
-                                                                          10,
-                                                                          0),
-                                                              child: Slider(
-                                                                activeColor: Color(
-                                                                    0xFFEFEFEF),
-                                                                inactiveColor:
+                                                            child: Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0, 0),
+                                                              child:
+                                                                  LinearPercentIndicator(
+                                                                percent: 0.8,
+                                                                width: 120,
+                                                                lineHeight: 10,
+                                                                animation: true,
+                                                                progressColor:
+                                                                    Colors
+                                                                        .white,
+                                                                backgroundColor:
                                                                     Color(
-                                                                        0xFF9E9E9E),
-                                                                min: 0,
-                                                                max: 100,
-                                                                value:
-                                                                    sliderValue3 ??=
-                                                                        80,
-                                                                onChanged:
-                                                                    (newValue) {
-                                                                  setState(() =>
-                                                                      sliderValue3 =
-                                                                          newValue);
-                                                                },
+                                                                        0xB22B3237),
+                                                                center: Text(
+                                                                  '80%',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Montserrat',
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontSize:
+                                                                            8,
+                                                                        fontWeight:
+                                                                            FontWeight.w300,
+                                                                      ),
+                                                                ),
+                                                                barRadius: Radius
+                                                                    .circular(
+                                                                        20),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .zero,
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ),
+                                                  Padding(
+                                                    padding:
+                                                        EdgeInsetsDirectional
+                                                            .fromSTEB(
+                                                                0, 0, 10, 0),
+                                                    child: Stack(
+                                                      children: [
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 0),
+                                                          child: Material(
+                                                            color: Colors
+                                                                .transparent,
+                                                            elevation: 1,
+                                                            shape:
+                                                                RoundedRectangleBorder(
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .circular(
+                                                                          20),
+                                                            ),
+                                                            child: Container(
+                                                              width: 250,
+                                                              height: 130,
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Colors
+                                                                    .white,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            20),
+                                                              ),
+                                                              child: Padding(
+                                                                padding:
+                                                                    EdgeInsetsDirectional
+                                                                        .fromSTEB(
+                                                                            15,
+                                                                            1,
+                                                                            15,
+                                                                            30),
+                                                                child: Column(
+                                                                  mainAxisSize:
+                                                                      MainAxisSize
+                                                                          .max,
+                                                                  mainAxisAlignment:
+                                                                      MainAxisAlignment
+                                                                          .center,
+                                                                  children: [
+                                                                    Align(
+                                                                      alignment:
+                                                                          AlignmentDirectional(
+                                                                              0,
+                                                                              0),
+                                                                      child:
+                                                                          Padding(
+                                                                        padding: EdgeInsetsDirectional.fromSTEB(
+                                                                            0,
+                                                                            0,
+                                                                            0,
+                                                                            10),
+                                                                        child:
+                                                                            Text(
+                                                                          'Rabu, 23 Maret 2022 ',
+                                                                          style: FlutterFlowTheme.of(context)
+                                                                              .bodyText1
+                                                                              .override(
+                                                                                fontFamily: 'Montserrat',
+                                                                                color: Colors.black,
+                                                                                fontSize: 12,
+                                                                                fontWeight: FontWeight.normal,
+                                                                              ),
+                                                                        ),
+                                                                      ),
+                                                                    ),
+                                                                    Align(
+                                                                      alignment:
+                                                                          AlignmentDirectional(
+                                                                              0,
+                                                                              0),
+                                                                      child:
+                                                                          Text(
+                                                                        'Har MK, Sampling GI, Asesmen TWS, Har Batere, Tebang Pohon, LCM.',
+                                                                        textAlign:
+                                                                            TextAlign.center,
+                                                                        style: FlutterFlowTheme.of(context)
+                                                                            .bodyText1
+                                                                            .override(
+                                                                              fontFamily: 'Montserrat',
+                                                                              color: Colors.black,
+                                                                              fontSize: 10,
+                                                                              fontWeight: FontWeight.w300,
+                                                                            ),
+                                                                      ),
+                                                                    ),
+                                                                  ],
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        Align(
+                                                          alignment:
+                                                              AlignmentDirectional(
+                                                                  0, 1),
+                                                          child: Container(
+                                                            width: 250,
+                                                            height: 30,
+                                                            decoration:
+                                                                BoxDecoration(
+                                                              color: Color(
+                                                                  0xFF467E8F),
+                                                              borderRadius:
+                                                                  BorderRadius
+                                                                      .only(
+                                                                bottomLeft: Radius
+                                                                    .circular(
+                                                                        20),
+                                                                bottomRight:
+                                                                    Radius
+                                                                        .circular(
+                                                                            20),
+                                                                topLeft: Radius
+                                                                    .circular(
+                                                                        0),
+                                                                topRight: Radius
+                                                                    .circular(
+                                                                        0),
+                                                              ),
+                                                            ),
+                                                            child: Align(
+                                                              alignment:
+                                                                  AlignmentDirectional(
+                                                                      0, 0),
+                                                              child:
+                                                                  LinearPercentIndicator(
+                                                                percent: 0.8,
+                                                                width: 120,
+                                                                lineHeight: 10,
+                                                                animation: true,
+                                                                progressColor:
+                                                                    Colors
+                                                                        .white,
+                                                                backgroundColor:
+                                                                    Color(
+                                                                        0xB22B3237),
+                                                                center: Text(
+                                                                  '80%',
+                                                                  style: FlutterFlowTheme.of(
+                                                                          context)
+                                                                      .bodyText1
+                                                                      .override(
+                                                                        fontFamily:
+                                                                            'Montserrat',
+                                                                        color: Colors
+                                                                            .black,
+                                                                        fontSize:
+                                                                            8,
+                                                                        fontWeight:
+                                                                            FontWeight.w300,
+                                                                      ),
+                                                                ),
+                                                                barRadius: Radius
+                                                                    .circular(
+                                                                        20),
+                                                                padding:
+                                                                    EdgeInsets
+                                                                        .zero,
                                                               ),
                                                             ),
                                                           ),

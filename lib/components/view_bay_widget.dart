@@ -75,6 +75,7 @@ class _ViewBayWidgetState extends State<ViewBayWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Montserrat',
+                                      color: Colors.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                     ),
@@ -191,6 +192,7 @@ class _ViewBayWidgetState extends State<ViewBayWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Montserrat',
+                                      color: Colors.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                     ),
@@ -307,6 +309,7 @@ class _ViewBayWidgetState extends State<ViewBayWidget> {
                                     .bodyText1
                                     .override(
                                       fontFamily: 'Montserrat',
+                                      color: Colors.black,
                                       fontSize: 16,
                                       fontWeight: FontWeight.normal,
                                     ),

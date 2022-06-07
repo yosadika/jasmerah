@@ -403,9 +403,8 @@ class _DasborBayWidgetState extends State<DasborBayWidget> {
                                         child: FlutterFlowLineChart(
                                           data: [
                                             FFLineChartData(
-                                              xData: FFAppState()
-                                                  .bebanTeganganAxis,
-                                              yData: FFAppState().bebanArusAxis,
+                                              xData: FFAppState().bebanTegangan,
+                                              yData: FFAppState().bebanArus,
                                               settings: LineChartBarData(
                                                 color: Color(0xFF25464E),
                                                 barWidth: 2,

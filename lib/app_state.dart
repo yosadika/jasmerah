@@ -16,6 +16,12 @@ class FFAppState {
     prefs = await SharedPreferences.getInstance();
     _collectionsList =
         prefs.getStringList('ff_collectionsList') ?? _collectionsList;
+    _bebanTegangan =
+        prefs.getStringList('ff_bebanTegangan')?.map(double.parse)?.toList() ??
+            _bebanTegangan;
+    _bebanArus =
+        prefs.getStringList('ff_bebanArus')?.map(double.parse)?.toList() ??
+            _bebanArus;
   }
 
   SharedPreferences prefs;
@@ -39,9 +45,45 @@ class FFAppState {
 
   bool booleanHelper = false;
 
-  List<int> bebanTeganganAxis = [149, 148, 148, 148, 152, 147, 152];
+  List<double> _bebanTegangan = [149, 148, 148, 148, 152, 147, 152];
+  List<double> get bebanTegangan => _bebanTegangan;
+  set bebanTegangan(List<double> _value) {
+    _bebanTegangan = _value;
+    prefs.setStringList(
+        'ff_bebanTegangan', _value.map((x) => x.toString()).toList());
+  }
 
-  List<int> bebanArusAxis = [427, 340, 348, 354, 401, 491, 454];
+  void addToBebanTegangan(double _value) {
+    _bebanTegangan.add(_value);
+    prefs.setStringList(
+        'ff_bebanTegangan', _bebanTegangan.map((x) => x.toString()).toList());
+  }
+
+  void removeFromBebanTegangan(double _value) {
+    _bebanTegangan.remove(_value);
+    prefs.setStringList(
+        'ff_bebanTegangan', _bebanTegangan.map((x) => x.toString()).toList());
+  }
+
+  List<double> _bebanArus = [427, 340, 348, 354, 401, 491, 454];
+  List<double> get bebanArus => _bebanArus;
+  set bebanArus(List<double> _value) {
+    _bebanArus = _value;
+    prefs.setStringList(
+        'ff_bebanArus', _value.map((x) => x.toString()).toList());
+  }
+
+  void addToBebanArus(double _value) {
+    _bebanArus.add(_value);
+    prefs.setStringList(
+        'ff_bebanArus', _bebanArus.map((x) => x.toString()).toList());
+  }
+
+  void removeFromBebanArus(double _value) {
+    _bebanArus.remove(_value);
+    prefs.setStringList(
+        'ff_bebanArus', _bebanArus.map((x) => x.toString()).toList());
+  }
 }
 
 LatLng _latLngFromString(String val) {

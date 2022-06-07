@@ -265,32 +265,40 @@ class _DasborGarduWidgetState extends State<DasborGarduWidget> {
                                                       ),
                                                     ],
                                                   ),
-                                                  LinearPercentIndicator(
-                                                    percent: 0.8,
-                                                    width: 120,
-                                                    lineHeight: 15,
-                                                    animation: true,
-                                                    progressColor:
-                                                        Color(0xFF2B3943),
-                                                    backgroundColor:
-                                                        Color(0x9AE0E3E7),
-                                                    center: Text(
-                                                      '1500/1732 A',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            color: Colors.white,
-                                                            fontSize: 8,
-                                                            fontWeight:
-                                                                FontWeight.w300,
-                                                          ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0, 0),
+                                                    child:
+                                                        LinearPercentIndicator(
+                                                      percent: 0.8,
+                                                      width: 120,
+                                                      lineHeight: 15,
+                                                      animation: true,
+                                                      progressColor:
+                                                          Color(0xFF2B3943),
+                                                      backgroundColor:
+                                                          Color(0x9AE0E3E7),
+                                                      center: Text(
+                                                        '1500/1732 A',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Montserrat',
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 8,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w300,
+                                                            ),
+                                                      ),
+                                                      barRadius:
+                                                          Radius.circular(20),
+                                                      padding: EdgeInsets.zero,
                                                     ),
-                                                    barRadius:
-                                                        Radius.circular(20),
-                                                    padding: EdgeInsets.zero,
                                                   ),
                                                 ],
                                               ),
@@ -348,32 +356,40 @@ class _DasborGarduWidgetState extends State<DasborGarduWidget> {
                                                       ),
                                                     ],
                                                   ),
-                                                  LinearPercentIndicator(
-                                                    percent: 0.6,
-                                                    width: 120,
-                                                    lineHeight: 15,
-                                                    animation: true,
-                                                    progressColor:
-                                                        Color(0xFF2B3943),
-                                                    backgroundColor:
-                                                        Color(0x9AE0E3E7),
-                                                    center: Text(
-                                                      '1200/1732 A',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            color: Colors.white,
-                                                            fontSize: 8,
-                                                            fontWeight:
-                                                                FontWeight.w300,
-                                                          ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0, 0),
+                                                    child:
+                                                        LinearPercentIndicator(
+                                                      percent: 0.6,
+                                                      width: 120,
+                                                      lineHeight: 15,
+                                                      animation: true,
+                                                      progressColor:
+                                                          Color(0xFF2B3943),
+                                                      backgroundColor:
+                                                          Color(0x9AE0E3E7),
+                                                      center: Text(
+                                                        '1200/1732 A',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Montserrat',
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 8,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w300,
+                                                            ),
+                                                      ),
+                                                      barRadius:
+                                                          Radius.circular(20),
+                                                      padding: EdgeInsets.zero,
                                                     ),
-                                                    barRadius:
-                                                        Radius.circular(20),
-                                                    padding: EdgeInsets.zero,
                                                   ),
                                                 ],
                                               ),
@@ -431,32 +447,40 @@ class _DasborGarduWidgetState extends State<DasborGarduWidget> {
                                                       ),
                                                     ],
                                                   ),
-                                                  LinearPercentIndicator(
-                                                    percent: 0.5,
-                                                    width: 120,
-                                                    lineHeight: 15,
-                                                    animation: true,
-                                                    progressColor:
-                                                        Color(0xFF2B3943),
-                                                    backgroundColor:
-                                                        Color(0x9AE0E3E7),
-                                                    center: Text(
-                                                      '1100/1732 A',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            color: Colors.white,
-                                                            fontSize: 8,
-                                                            fontWeight:
-                                                                FontWeight.w300,
-                                                          ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0, 0),
+                                                    child:
+                                                        LinearPercentIndicator(
+                                                      percent: 0.5,
+                                                      width: 120,
+                                                      lineHeight: 15,
+                                                      animation: true,
+                                                      progressColor:
+                                                          Color(0xFF2B3943),
+                                                      backgroundColor:
+                                                          Color(0x9AE0E3E7),
+                                                      center: Text(
+                                                        '1100/1732 A',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Montserrat',
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 8,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w300,
+                                                            ),
+                                                      ),
+                                                      barRadius:
+                                                          Radius.circular(20),
+                                                      padding: EdgeInsets.zero,
                                                     ),
-                                                    barRadius:
-                                                        Radius.circular(20),
-                                                    padding: EdgeInsets.zero,
                                                   ),
                                                 ],
                                               ),
@@ -514,32 +538,40 @@ class _DasborGarduWidgetState extends State<DasborGarduWidget> {
                                                       ),
                                                     ],
                                                   ),
-                                                  LinearPercentIndicator(
-                                                    percent: 0.7,
-                                                    width: 120,
-                                                    lineHeight: 15,
-                                                    animation: true,
-                                                    progressColor:
-                                                        Color(0xFF2B3943),
-                                                    backgroundColor:
-                                                        Color(0x9AE0E3E7),
-                                                    center: Text(
-                                                      '1400/1732 A',
-                                                      style: FlutterFlowTheme
-                                                              .of(context)
-                                                          .bodyText1
-                                                          .override(
-                                                            fontFamily:
-                                                                'Montserrat',
-                                                            color: Colors.white,
-                                                            fontSize: 8,
-                                                            fontWeight:
-                                                                FontWeight.w300,
-                                                          ),
+                                                  Align(
+                                                    alignment:
+                                                        AlignmentDirectional(
+                                                            0, 0),
+                                                    child:
+                                                        LinearPercentIndicator(
+                                                      percent: 0.7,
+                                                      width: 120,
+                                                      lineHeight: 15,
+                                                      animation: true,
+                                                      progressColor:
+                                                          Color(0xFF2B3943),
+                                                      backgroundColor:
+                                                          Color(0x9AE0E3E7),
+                                                      center: Text(
+                                                        '1400/1732 A',
+                                                        style: FlutterFlowTheme
+                                                                .of(context)
+                                                            .bodyText1
+                                                            .override(
+                                                              fontFamily:
+                                                                  'Montserrat',
+                                                              color:
+                                                                  Colors.white,
+                                                              fontSize: 8,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w300,
+                                                            ),
+                                                      ),
+                                                      barRadius:
+                                                          Radius.circular(20),
+                                                      padding: EdgeInsets.zero,
                                                     ),
-                                                    barRadius:
-                                                        Radius.circular(20),
-                                                    padding: EdgeInsets.zero,
                                                   ),
                                                 ],
                                               ),
@@ -615,6 +647,7 @@ class _DasborGarduWidgetState extends State<DasborGarduWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Montserrat',
+                                    color: Colors.black,
                                     fontSize: 10,
                                     fontWeight: FontWeight.w300,
                                   ),
@@ -630,6 +663,7 @@ class _DasborGarduWidgetState extends State<DasborGarduWidget> {
                                   .bodyText1
                                   .override(
                                     fontFamily: 'Montserrat',
+                                    color: Colors.black,
                                     fontSize: 16,
                                     fontWeight: FontWeight.w300,
                                   ),
