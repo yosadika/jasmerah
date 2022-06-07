@@ -102,7 +102,7 @@ class _MenuPLNDailyWidgetState extends State<MenuPLNDailyWidget> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: FlutterFlowCalendar(
-                      color: Color(0xB2467E8F),
+                      color: Color(0xFF25464E),
                       weekFormat: false,
                       weekStartsMonday: false,
                       initialDate: getCurrentTimestamp,
@@ -130,7 +130,9 @@ class _MenuPLNDailyWidgetState extends State<MenuPLNDailyWidget> {
                         fontWeight: FontWeight.w500,
                         fontSize: 14,
                       ),
-                      inactiveDateStyle: TextStyle(),
+                      inactiveDateStyle: TextStyle(
+                        color: Color(0xFFACACAC),
+                      ),
                     ),
                   ),
                 ),
