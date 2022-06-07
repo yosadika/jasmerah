@@ -20,12 +20,17 @@ abstract class DataGarduIndukRecord
   int get uidGarduInduk;
 
   @nullable
+  @BuiltValueField(wireName: 'ultg_garduInduk')
+  String get ultgGarduInduk;
+
+  @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
   DocumentReference get reference;
 
   static void _initializeBuilder(DataGarduIndukRecordBuilder builder) => builder
     ..namaGarduInduk = ''
-    ..uidGarduInduk = 0;
+    ..uidGarduInduk = 0
+    ..ultgGarduInduk = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('data_gardu_induk');
@@ -52,9 +57,11 @@ abstract class DataGarduIndukRecord
 Map<String, dynamic> createDataGarduIndukRecordData({
   String namaGarduInduk,
   int uidGarduInduk,
+  String ultgGarduInduk,
 }) =>
     serializers.toFirestore(
         DataGarduIndukRecord.serializer,
         DataGarduIndukRecord((d) => d
           ..namaGarduInduk = namaGarduInduk
-          ..uidGarduInduk = uidGarduInduk));
+          ..uidGarduInduk = uidGarduInduk
+          ..ultgGarduInduk = ultgGarduInduk));

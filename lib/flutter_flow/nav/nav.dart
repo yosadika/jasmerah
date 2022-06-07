@@ -6,7 +6,8 @@ import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
 import '../../backend/backend.dart';
 import '../../auth/firebase_user_provider.dart';
-
+import '../../backend/push_notifications/push_notifications_handler.dart'
+    show PushNotificationsHandler;
 import '../../backend/firebase_dynamic_links/firebase_dynamic_links.dart'
     show DynamicLinksHandler;
 import '../../index.dart';
@@ -177,7 +178,49 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'menuUPT',
               path: 'menuUPT',
               requireAuth: true,
-              builder: (context, params) => MenuUPTWidget(),
+              builder: (context, params) => MenuUPTWidget(
+                parameterUPT: params.getParam(
+                    'parameterUPT', ParamType.DocumentReference, 'data_upt'),
+              ),
+            ),
+            FFRoute(
+              name: 'menuBuletin',
+              path: 'menuBuletin',
+              requireAuth: true,
+              builder: (context, params) => MenuBuletinWidget(
+                parameterBuletin: params.getParam('parameterBuletin',
+                    ParamType.DocumentReference, 'data_buletin'),
+              ),
+            ),
+            FFRoute(
+              name: 'dasborULTG',
+              path: 'dasborULTG',
+              requireAuth: true,
+              builder: (context, params) => DasborULTGWidget(
+                parameterULTG: params.getParam(
+                    'parameterULTG', ParamType.DocumentReference, 'data_ultg'),
+              ),
+            ),
+            FFRoute(
+              name: 'menuPLNDaily',
+              path: 'menuPLNDaily',
+              requireAuth: true,
+              builder: (context, params) => MenuPLNDailyWidget(),
+            ),
+            FFRoute(
+              name: 'dasborGardu',
+              path: 'dasborGardu',
+              requireAuth: true,
+              builder: (context, params) => DasborGarduWidget(
+                parameterGardu: params.getParam('parameterGardu',
+                    ParamType.DocumentReference, 'data_gardu_induk'),
+              ),
+            ),
+            FFRoute(
+              name: 'dasborBay',
+              path: 'dasborBay',
+              requireAuth: true,
+              builder: (context, params) => DasborBayWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
@@ -352,7 +395,8 @@ class FFRoute {
                     ),
                   ),
                 )
-              : DynamicLinksHandler(child: page);
+              : PushNotificationsHandler(
+                  child: DynamicLinksHandler(child: page));
 
           final transitionInfo = state.transitionInfo;
           return transitionInfo.hasTransition

@@ -13,6 +13,32 @@
           "order": "DESCENDING"
         }
       ]
+    },
+    {
+      "collectionGroup": "data_ultg",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "upt_ultg",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "nama_ultg",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": [
+    {
+      "collectionGroup": "fcm_tokens",
+      "fieldPath": "fcm_token",
+      "indexes": [
+        {
+          "order": "ASCENDING",
+          "queryScope": "COLLECTION_GROUP"
+        }
+      ]
     }
   ]
 }

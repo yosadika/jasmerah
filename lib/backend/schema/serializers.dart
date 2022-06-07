@@ -17,6 +17,9 @@ import 'kategori_peralatan_record.dart';
 import 'data_alat_uji_record.dart';
 import 'data_material_gudang_record.dart';
 import 'data_k2lh_record.dart';
+import 'data_buletin_record.dart';
+import 'data_event_record.dart';
+import 'data_kategori_event_record.dart';
 
 import 'index.dart';
 
@@ -44,6 +47,9 @@ const kDocumentReferenceField = 'Document__Reference__Field';
   DataAlatUjiRecord,
   DataMaterialGudangRecord,
   DataK2lhRecord,
+  DataBuletinRecord,
+  DataEventRecord,
+  DataKategoriEventRecord,
 ])
 final Serializers serializers = (_$serializers.toBuilder()
       ..add(DocumentReferenceSerializer())

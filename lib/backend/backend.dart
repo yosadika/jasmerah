@@ -21,6 +21,9 @@ import 'schema/kategori_peralatan_record.dart';
 import 'schema/data_alat_uji_record.dart';
 import 'schema/data_material_gudang_record.dart';
 import 'schema/data_k2lh_record.dart';
+import 'schema/data_buletin_record.dart';
+import 'schema/data_event_record.dart';
+import 'schema/data_kategori_event_record.dart';
 import 'schema/serializers.dart';
 
 export 'dart:async' show StreamSubscription;
@@ -45,6 +48,9 @@ export 'schema/kategori_peralatan_record.dart';
 export 'schema/data_alat_uji_record.dart';
 export 'schema/data_material_gudang_record.dart';
 export 'schema/data_k2lh_record.dart';
+export 'schema/data_buletin_record.dart';
+export 'schema/data_event_record.dart';
+export 'schema/data_kategori_event_record.dart';
 
 /// Functions to query UsersRecords (as a Stream and as a Future).
 Stream<List<UsersRecord>> queryUsersRecord({
@@ -764,6 +770,133 @@ Future<FFFirestorePage<DataK2lhRecord>> queryDataK2lhRecordPage({
       pageSize: pageSize,
       isStream: isStream,
     );
+
+/// Functions to query DataBuletinRecords (as a Stream and as a Future).
+Stream<List<DataBuletinRecord>> queryDataBuletinRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      DataBuletinRecord.collection,
+      DataBuletinRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<DataBuletinRecord>> queryDataBuletinRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      DataBuletinRecord.collection,
+      DataBuletinRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<DataBuletinRecord>> queryDataBuletinRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      DataBuletinRecord.collection,
+      DataBuletinRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query DataEventRecords (as a Stream and as a Future).
+Stream<List<DataEventRecord>> queryDataEventRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      DataEventRecord.collection,
+      DataEventRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<DataEventRecord>> queryDataEventRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      DataEventRecord.collection,
+      DataEventRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<DataEventRecord>> queryDataEventRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+    queryCollectionPage(
+      DataEventRecord.collection,
+      DataEventRecord.serializer,
+      queryBuilder: queryBuilder,
+      nextPageMarker: nextPageMarker,
+      pageSize: pageSize,
+      isStream: isStream,
+    );
+
+/// Functions to query DataKategoriEventRecords (as a Stream and as a Future).
+Stream<List<DataKategoriEventRecord>> queryDataKategoriEventRecord({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollection(
+      DataKategoriEventRecord.collection,
+      DataKategoriEventRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<List<DataKategoriEventRecord>> queryDataKategoriEventRecordOnce({
+  Query Function(Query) queryBuilder,
+  int limit = -1,
+  bool singleRecord = false,
+}) =>
+    queryCollectionOnce(
+      DataKategoriEventRecord.collection,
+      DataKategoriEventRecord.serializer,
+      queryBuilder: queryBuilder,
+      limit: limit,
+      singleRecord: singleRecord,
+    );
+
+Future<FFFirestorePage<DataKategoriEventRecord>>
+    queryDataKategoriEventRecordPage({
+  Query Function(Query) queryBuilder,
+  DocumentSnapshot nextPageMarker,
+  int pageSize,
+  bool isStream,
+}) =>
+        queryCollectionPage(
+          DataKategoriEventRecord.collection,
+          DataKategoriEventRecord.serializer,
+          queryBuilder: queryBuilder,
+          nextPageMarker: nextPageMarker,
+          pageSize: pageSize,
+          isStream: isStream,
+        );
 
 Stream<List<T>> queryCollection<T>(Query collection, Serializer<T> serializer,
     {Query Function(Query) queryBuilder,

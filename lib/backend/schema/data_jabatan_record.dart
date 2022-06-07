@@ -20,19 +20,19 @@ abstract class DataJabatanRecord
   bool get jabatanIsUnit;
 
   @nullable
-  @BuiltValueField(wireName: 'nama_unit')
-  DocumentReference get namaUnit;
-
-  @nullable
   @BuiltValueField(wireName: 'jabatan_is_subunit')
   bool get jabatanIsSubunit;
 
   @nullable
-  @BuiltValueField(wireName: 'nama_subunit')
-  DocumentReference get namaSubunit;
+  String get uid;
 
   @nullable
-  String get uid;
+  @BuiltValueField(wireName: 'namaUnit_jabatan')
+  String get namaUnitJabatan;
+
+  @nullable
+  @BuiltValueField(wireName: 'namaSubUnit_jabatan')
+  String get namaSubUnitJabatan;
 
   @nullable
   @BuiltValueField(wireName: kDocumentReferenceField)
@@ -42,7 +42,9 @@ abstract class DataJabatanRecord
     ..namaJabatan = ''
     ..jabatanIsUnit = false
     ..jabatanIsSubunit = false
-    ..uid = '';
+    ..uid = ''
+    ..namaUnitJabatan = ''
+    ..namaSubUnitJabatan = '';
 
   static CollectionReference get collection =>
       FirebaseFirestore.instance.collection('data_jabatan');
@@ -68,17 +70,17 @@ abstract class DataJabatanRecord
 Map<String, dynamic> createDataJabatanRecordData({
   String namaJabatan,
   bool jabatanIsUnit,
-  DocumentReference namaUnit,
   bool jabatanIsSubunit,
-  DocumentReference namaSubunit,
   String uid,
+  String namaUnitJabatan,
+  String namaSubUnitJabatan,
 }) =>
     serializers.toFirestore(
         DataJabatanRecord.serializer,
         DataJabatanRecord((d) => d
           ..namaJabatan = namaJabatan
           ..jabatanIsUnit = jabatanIsUnit
-          ..namaUnit = namaUnit
           ..jabatanIsSubunit = jabatanIsSubunit
-          ..namaSubunit = namaSubunit
-          ..uid = uid));
+          ..uid = uid
+          ..namaUnitJabatan = namaUnitJabatan
+          ..namaSubUnitJabatan = namaSubUnitJabatan));

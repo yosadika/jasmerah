@@ -23,3 +23,8 @@ export 'anomali_view_all_berulang/anomali_view_all_berulang_widget.dart'
 export 'menu_wiring/menu_wiring_widget.dart' show MenuWiringWidget;
 export 'menu_aset/menu_aset_widget.dart' show MenuAsetWidget;
 export 'menu_u_p_t/menu_u_p_t_widget.dart' show MenuUPTWidget;
+export 'menu_buletin/menu_buletin_widget.dart' show MenuBuletinWidget;
+export 'dasbor_u_l_t_g/dasbor_u_l_t_g_widget.dart' show DasborULTGWidget;
+export 'menu_p_l_n_daily/menu_p_l_n_daily_widget.dart' show MenuPLNDailyWidget;
+export 'dasbor_gardu/dasbor_gardu_widget.dart' show DasborGarduWidget;
+export 'dasbor_bay/dasbor_bay_widget.dart' show DasborBayWidget;
